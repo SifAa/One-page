@@ -5,14 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One page application</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="navigation-btn text-center bg-dark">
+        <button id="quiz-btn" class="nav-btn btn btn-primary">Quiz</button>
+        <button id="todo-btn" class="nav-btn btn" disabled>To-do</button>
+    </div>
 
-    <div id="quiz-container">
+    <!-- todo page -->
+    <div id="todo-page">
+        <div class="todo-container container">
+
+            <header class="text-center text-light my-4">
+                <h1 class="mb-4">Todo List</h1>
+                <form class="search">
+                    <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+                </form>
+            </header>
+
+            <ul class="list-group todos mx-auto text-light">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>play mariokart</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>defeat ganon in zelda</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>make a veggie pie</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+            </ul>
+
+            <form class="add text-center my-4">
+                <label class="text-light">Add a new todo...</label>
+                <input class="form-control m-auto" type="text" name="add" />
+            </form>
+        </div>
+    </div>
+
+    <!-- quiz page -->
+    <div id="quiz-page" class="d-none">
         <!-- top section -->
         <div class="intro py-3 bg-white text-center">
             <div class="container">
@@ -87,6 +127,8 @@
 
     </div>
 
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/todo.js"></script>
     <script src="scripts/quiz.js"></script>
 </body>
 
