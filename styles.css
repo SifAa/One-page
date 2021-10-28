@@ -1,0 +1,44 @@
+/* navigation styling */
+.navigation-btn {
+    min-height: 50px;
+}
+.nav-btn {
+    height: 40px;
+    margin-top: 5px;
+}
+#todo-btn {
+    background: #352f5b;
+    color: #fff;
+    margin-left: 40px;
+}
+
+/* todo styling */
+#todo-page {
+    background: #352f5b;
+    padding: 20px 0;
+    min-height: calc(100vh - 50px);
+  }
+  .todo-container {
+    max-width: 400px;
+  }
+  input[type=text],
+  input[type=text]:focus{
+    color: #fff;
+    border: none;
+    background: rgba(0,0,0,0.2);
+    max-width: 400px;
+  }
+  .todos li{
+    background: #423a6f;
+  }
+  .delete{
+    cursor: pointer;
+  }
+  .filtered {
+      display: none !important;
+  }
+
+  /* quiz styling */
+  #quiz-page {
+    min-height: calc(100vh - 50px);
+}
