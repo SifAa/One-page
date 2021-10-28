@@ -15,7 +15,7 @@ const generateTemplate = todo => {
 addForm.addEventListener('submit', e => {
     e.preventDefault(); //this is for submit default settings
     
-    const todo = addForm.add.value.trim(); //trim removes whitespace
+    const todo = addForm.add.value.trim().toLowerCase(); //trim removes whitespace
     if (todo.length){
         generateTemplate(todo); 
         addForm.reset();
@@ -43,6 +43,6 @@ const filterTodos = (term) => {
 
 // keyup event
 search.addEventListener('keyup', () => {
-    const term = search.value.trim();
+    const term = search.value.trim().toLowerCase();
     filterTodos(term);
 });
